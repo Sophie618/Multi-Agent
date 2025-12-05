@@ -2,7 +2,7 @@
 from mcp.server.fastmcp import FastMCP#用来快速创建Model Context Protocol服务器的工具
 import httpx#导入httpx库，用于发送HTTP异步请求
 import asyncio#导入asyncio库，用于异步编程
-import json
+import json#json库处理json数据
 
 # 🔴 这里填入你刚才在后台复制的 Publishable API Key (pk_...)
 # 如果你找不到 Key，先留空试试，但 Medusa 2.0 通常需要它
@@ -126,4 +126,4 @@ async def get_product_details(product_id: str) -> str:
         return f"查询详情异常: {str(e)}"
 
 if __name__ == "__main__":
-    mcp.run()
+    mcp.run()#Server 启动后才会挂起，一直监听 Client发过来的指令
