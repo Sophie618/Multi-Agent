@@ -1,3 +1,5 @@
 "agent/.env" 
 ".env" 
 "*.env"    # 可选，更保险
+"node_modules/"
+"dist/"
