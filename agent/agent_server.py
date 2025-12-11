@@ -4,10 +4,12 @@ from mcp.server.fastmcp import FastMCP#用来快速创建Model Context Protocol�
 import httpx#导入httpx库，用于发送HTTP异步请求
 import asyncio#导入asyncio库，用于异步编程
 import json#json库处理json数据
+import os#导入os库，用于操作系统相关功能
+from dotenv import load_dotenv#从.env文件加载环境变量
 
 # 🔴 这里填入你刚才在后台复制的 Publishable API Key (pk_...)
 # 如果你找不到 Key，先留空试试，但 Medusa 2.0 通常需要它
-API_KEY="pk_c6797ee981d3a56db47ecb9c3144e0f1ad7c0e56a2559299be21668a08299c5e"# Medusa的公开API密钥
+API_KEY=os.getenv("MEDUSA_API_KEY")# Medusa的公开API密钥
 
 # 定义服务名称
 mcp = FastMCP("My-Ecom-Agent")#创建名为"My-Ecom-Agent"的MCP服务器实例
