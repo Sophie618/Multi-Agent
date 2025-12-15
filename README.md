@@ -6,7 +6,7 @@
 
 本项目采用典型的分层架构，通过 MCP 协议连接 LLM 与本地工具。
 
-![Architecture Diagram](architecture_diagram.png)
+![Architecture Diagram](Multi-agent Architechture.png)
 
 ### 核心组件
 
