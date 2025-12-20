@@ -24,7 +24,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-SERVER_SCRIPT_PATH = "D:\\Multi_Agent\\agent\\agent_server.py"
+BASE_DIR=os.path.dirname(os.path.abspath(__file__))
+SERVER_SCRIPT_PATH=os.path.join(BASE_DIR,"agent_server.py")
 
 class ChatRequest(BaseModel):
     query: str

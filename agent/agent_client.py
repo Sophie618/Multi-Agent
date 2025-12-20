@@ -8,7 +8,10 @@ from dotenv import load_dotenv#从.env文件加载环境变量
 
 load_dotenv()#加载环境变量
 
-SERVER_SCRIPT_PATH = "D:\\Multi_Agent\\agent\\agent_server.py"#指定要连接的mcp脚本的绝对路径
+# 获取当前文件所在的目录
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+# 动态拼接路径，无论在谁的电脑上都能跑
+SERVER_SCRIPT_PATH = os.path.join(BASE_DIR, "agent_server.py")
 
 async def run_agent_loop(user_query: str):#定义异步函数接受用户的查询字符串
     print(f"👤 用户: {user_query}")#打印用户的问题
