@@ -128,4 +128,4 @@ async def get_product_details(product_id: str) -> str:
         return f"查询详情异常: {str(e)}"
 
 if __name__ == "__main__":
-    mcp.run()#Server 启动后才会挂起，一直监听 Client发过来的指令
+    mcp.run(transport='stdio')#Server 启动后才会挂起，一直监听 Client发过来的指令
